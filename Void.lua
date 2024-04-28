@@ -1,6 +1,6 @@
-local newfont = Drawing.new("Font", "smallestpixel")
-newfont.Data = game:HttpGet("https://raw.githubusercontent.com/razorwarecc/custom-fonts/main/smallest-pixel.ttf")
-repeat wait() until newfont.Loaded
+            local newfont = Drawing.new("Font", "monaco")
+            newfont.Data = game:HttpGet("https://raw.githubusercontent.com/razorwarecc/custom-fonts/main/monaco-font.ttf")
+            repeat wait() until newfont.Loaded
 local drawing = {} do
     local services = setmetatable({}, {
         __index = function(self, key)
