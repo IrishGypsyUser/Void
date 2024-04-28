@@ -1,6 +1,6 @@
 local newfont = Drawing.new("Font", "smallestpixel")
 newfont.Data = game:HttpGet("https://raw.githubusercontent.com/razorwarecc/custom-fonts/main/smallest-pixel.ttf")
-
+repeat wait() until newfont.Loaded
 local drawing = {} do
     local services = setmetatable({}, {
         __index = function(self, key)
@@ -1595,7 +1595,7 @@ function library.createdropdown(holder, content, flag, callback, default, max, s
     local value = utility.create("Text", {
         Text = "NONE",
         Font = newfont,
-        Size = 13,
+        Size = 12,
         Position = UDim2.new(0, 6, 0, 0),
         Theme = "Disabled Text",
         ZIndex = 9,
@@ -1606,7 +1606,7 @@ function library.createdropdown(holder, content, flag, callback, default, max, s
     local icon = utility.create("Text", {
         Text = "+",
         Font = newfont,
-        Size = 13,
+        Size = 12,
         Position = UDim2.new(1, -13, 0, 0),
         Theme = "Text",
         ZIndex = 9,
@@ -1703,7 +1703,7 @@ function library.createdropdown(holder, content, flag, callback, default, max, s
         local title = utility.create("Text", {
             Text = name,
             Font = newfont,
-            Size = 13,
+            Size = 12,
             Position = UDim2.new(0, 8, 0, 1),
             Theme = "Disabled Text",
             ZIndex = 15,
@@ -2046,7 +2046,7 @@ function library.createslider(min, max, parent, text, default, float, flag, call
 
     local valuetext = utility.create("Text", {
         Font = newfont,
-        Size = 13,
+        Size = 12,
         Position = UDim2.new(0.5, 0, 0, -2),
         Theme = "Text",
         Center = true,
@@ -2309,7 +2309,7 @@ function library.createcolorpicker(default, defaultalpha, parent, count, flag, c
     local text = utility.create("Text", {
         Text = string.format("%s, %s, %s", math.floor(default.R * 255), math.floor(default.G * 255), math.floor(default.B * 255)),
         Font = newfont,
-        Size = 13,
+        Size = 12,
         Position = UDim2.new(0.5, 0, 0, 0),
         Center = true,
         Theme = "Text",
@@ -2321,7 +2321,7 @@ function library.createcolorpicker(default, defaultalpha, parent, count, flag, c
     local placeholdertext = utility.create("Text", {
         Text = "R, G, B",
         Font = newfont,
-        Size = 13,
+        Size = 12,
         Position = UDim2.new(0.5, 0, 0, 0),
         Center = true,
         Theme = "Disabled Text",
@@ -2614,7 +2614,7 @@ function library.createkeybind(default, parent, blacklist, flag, callback, offse
 
     local keytext = utility.create("Text", {
         Font = newfont,
-        Size = 13,
+        Size = 12,
         Theme = "Disabled Text",
         Position = UDim2.new(0, 0, 0, offset),
         ZIndex = 9,
@@ -2733,7 +2733,7 @@ function library:Watermark(str)
     local text = utility.create("Text", {
         Text = str,
         Font = newfont,
-        Size = 13,
+        Size = 12,
         Position = UDim2.new(0.5, 0, 0, 3),
         Theme = "Text",
         Center = true,
@@ -2817,7 +2817,7 @@ function library:Load(options)
     utility.create("Text", {
         Text = name,
         Font = newfont,
-        Size = 13,
+        Size = 12,
         Position = UDim2.new(0, 6, 0, 4),
         Theme = "Text",
         ZIndex = 4,
@@ -2915,7 +2915,7 @@ function library:Load(options)
         local title = utility.create("Text", {
             Text = name,
             Font = newfont,
-            Size = 13,
+            Size = 12,
             Position = UDim2.new(0.5, 0, 0, 3),
             Theme = #self.tabtoggles == 1 and "Text" or "Disabled Text",
             ZIndex = 7,
@@ -3025,7 +3025,7 @@ function library:Load(options)
             utility.create("Text", {
                 Text = name,
                 Font = newfont,
-                Size = 13,
+                Size = 12,
                 Position = UDim2.new(0, 6, 0, 3),
                 Theme = "Text",
                 ZIndex = 7,
@@ -3054,7 +3054,7 @@ function library:Load(options)
                 local text = utility.create("Text", {
                     Text = name,
                     Font = newfont,
-                    Size = 13,
+                    Size = 12,
                     Position = UDim2.new(0, 0, 0, 0),
                     Theme = "Text",
                     ZIndex = 7,
@@ -3126,7 +3126,7 @@ function library:Load(options)
                 local text = utility.create("Text", {
                     Text = name,
                     Font = newfont,
-                    Size = 13,
+                    Size = 12,
                     Position = UDim2.new(0.5, 0, 0, 0),
                     Theme = "Text",
                     ZIndex = 9,
@@ -3181,7 +3181,7 @@ function library:Load(options)
                 utility.create("Text", {
                     Text = name,
                     Font = newfont,
-                    Size = 13,
+                    Size = 12,
                     Position = UDim2.new(0.5, 0, 0, 0),
                     Center = true,
                     Theme = "Text",
@@ -3257,7 +3257,7 @@ function library:Load(options)
                 local title = utility.create("Text", {
                     Text = name,
                     Font = newfont,
-                    Size = 13,
+                    Size = 12,
                     Position = UDim2.new(0, 17, 0, -2),
                     Theme = "Disabled Text",
                     ZIndex = 7,
@@ -3467,7 +3467,7 @@ function library:Load(options)
                 local text = utility.create("Text", {
                     Text = default,
                     Font = newfont,
-                    Size = 13,
+                    Size = 12,
                     Position = UDim2.new(0.5, 0, 0, 0),
                     Center = true,
                     Theme = "Text",
@@ -3479,7 +3479,7 @@ function library:Load(options)
                 local placeholdertext = utility.create("Text", {
                     Text = placeholder,
                     Font = newfont,
-                    Size = 13,
+                    Size = 12,
                     Position = UDim2.new(0.5, 0, 0, 0),
                     Center = true,
                     Theme = "Disabled Text",
@@ -3568,7 +3568,7 @@ function library:Load(options)
                 local title = utility.create("Text", {
                     Text = name,
                     Font = newfont,
-                    Size = 13,
+                    Size = 12,
                     Position = UDim2.new(0, 0, 0, -2),
                     Theme = "Text",
                     ZIndex = 7,
@@ -3627,7 +3627,7 @@ function library:Load(options)
                 local title = utility.create("Text", {
                     Text = name,
                     Font = newfont,
-                    Size = 13,
+                    Size = 12,
                     Position = UDim2.new(0, 0, 0, -2),
                     Theme = "Text",
                     ZIndex = 7,
@@ -3686,7 +3686,7 @@ function library:Load(options)
                 local title = utility.create("Text", {
                     Text = name,
                     Font = newfont,
-                    Size = 13,
+                    Size = 12,
                     Position = UDim2.new(0, 0, 0, -2),
                     Theme = "Text",
                     ZIndex = 7,
@@ -3718,7 +3718,7 @@ function library:Load(options)
                 local title = utility.create("Text", {
                     Text = name,
                     Font = newfont,
-                    Size = 13,
+                    Size = 12,
                     Position = UDim2.new(0, 0, 0, 0),
                     Theme = "Text",
                     ZIndex = 7,
@@ -3766,7 +3766,7 @@ function library:Load(options)
                 local title = utility.create("Text", {
                     Text = name,
                     Font = newfont,
-                    Size = 13,
+                    Size = 12,
                     Theme = "Text",
                     ZIndex = 7,
                     Outline = true,
